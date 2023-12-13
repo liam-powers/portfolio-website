@@ -2,7 +2,7 @@
 import Typewriter from 'typewriter-effect';
 
 
-export default function TypeWords({ input }) {
+export default function TypeWords({ input }: { input: string | string[] }) {
     const text = Array.isArray(input) ? input : [input.toString()];
     return (
         <Typewriter
