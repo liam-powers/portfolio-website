@@ -24,7 +24,7 @@ const technologies = [
   'Next.js',
 ];
 
-function createTechDisplay(arr) {
+function createTechDisplay(arr: string[]) {
   return (
     <div className="flex flex-col gap-6 w-16 h-auto">
       {arr.map((el) => (
