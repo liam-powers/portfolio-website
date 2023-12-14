@@ -3,10 +3,12 @@ import NavLinks from "../components/NavLinks";
 import FilmShowcaseGrid from "../components/FilmShowcaseGrid";
 import Footer from "../components/Footer";
 import CustomCursor from "../components/CustomCursor";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export default function Film() {
     return (
         <div>
+            <GoogleAnalytics />
             <CustomCursor />
             <NavLinks />
             <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 pt-10 items-center">

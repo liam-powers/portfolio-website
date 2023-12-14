@@ -6,6 +6,7 @@ import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
 import Image from 'next/image';
 import CustomCursor from "./components/CustomCursor";
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 const bodyText = "I'm a full-time student at Northwestern University majoring in Computer Science and Jazz Studies, \
 with a minor in Data Science. I created this site with Next.js, a React framework, \
@@ -13,7 +14,8 @@ to showcase some of my projects and interests.";
 
 export default function Home() {
   return (
-    <div className='text-black text-2xl snap-y snap-mandatory h-full max-h-screen overflow-y-scroll'>
+    <div className='text-black text-2xl h-full max-h-screen'>
+      <GoogleAnalytics/>
       <CustomCursor/>
       <link rel="icon" href="/favicon.ico" />
       <div className='first section snap-always snap-start pb-20'>
