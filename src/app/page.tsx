@@ -3,7 +3,9 @@ import Projects from './components/Projects';
 import LangsAndTechs from './components/LangsAndTechs';
 import TypeWords from './components/TypeWords';
 import ContactMe from './components/ContactMe';
+import Footer from './components/Footer';
 import Image from 'next/image';
+import CustomCursor from "./components/CustomCursor";
 
 const bodyText = "I'm a full-time student at Northwestern University majoring in Computer Science and Jazz Studies, \
 with a minor in Data Science. I created this site with Next.js, a React framework, \
@@ -12,18 +14,19 @@ to showcase some of my projects and interests.";
 export default function Home() {
   return (
     <div className='text-black text-2xl snap-y snap-mandatory h-full max-h-screen overflow-y-scroll'>
+      <CustomCursor/>
       <link rel="icon" href="/favicon.ico" />
       <div className='first section snap-always snap-start pb-20'>
         <NavLinks />
-        <div className='px-150 text-white text-3xl font-bold text-center pt-10'>
-          <div className='bg-mocha/[.85] p-4 rounded-2xl whitespace-nowrap'>
+        <div className='text-white text-xl md:text-3xl font-bold text-center pt-10 px-20 md:px-0 mx-auto max-w-screen-sm'>
+          <div className='bg-mocha/[.85] p-4 rounded-2xl '>
             <TypeWords input={'> Hello! I\'m Liam Powers.'} />
           </div>
         </div>
         <div className="py-10 flex justify-center">
-          <Image src="/me.jpg" alt="A picture of me!" className="w-80 h-auto" />
+          <Image src="/me.jpg" alt="A picture of me!" width={0} height={0} sizes="100vw" className="w-80 h-auto"/>
         </div>
-        <div className="mx-auto max-w-screen-xl rounded-2xl text-center text-white">
+        <div className="mx-auto max-w-screen-xl rounded-2xl text-center text-white px-5">
           <div className="bg-mocha/[.85] p-4 rounded-2xl">
             {bodyText}
           </div>
@@ -36,7 +39,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="projects" className="third section snap-always snap-start text-white pt-10 px-80 ">
+      <div id="projects" className="third section snap-always snap-start text-white pt-10 mx-auto max-w-screen-xl">
         <div className="pb-10 flex justify-center">
           <div className='bg-mocha/[.85] p-4 rounded-2xl text-center font-bold text-4xl'>
             Projects
@@ -47,17 +50,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact" className="fourth section snap-always snap-start text-white pt-40 px-80">
-        <div className=''>
+      <div id="contact" className="fourth section snap-always snap-start text-white pt-5 md:pt-[30px] px-10 mx-auto max-w-screen-xl">
           <ContactMe />
-        </div>
       </div>
 
-      <div className='footer pt-20 pb-10 flex justify-center text-base'>
-        <div>
-          Website created by Liam Powers via React & Next.js © 2023
-        </div>
-      </div>
+      <div className="text-sm"><Footer/></div>
+
     </div>
   )
 }

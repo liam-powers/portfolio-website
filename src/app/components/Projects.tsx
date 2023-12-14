@@ -25,20 +25,20 @@ export default function Projects() {
     <div className="flex flex-col gap-[3rem]">
       {projects.map((project) => (
         <div key={project.name}>
-          <div className="flex flex-row gap-20 min-w-full">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-20 px-5 pb-20 md:pb-0min-w-full">
 
-            <div className="flex flex-col gap-4 w-10/12 h-auto bg-mocha/[.85] rounded-2xl p-4 md:p-8 min-w-[300px] md:min-w-0">
+            <div className="flex flex-col gap-4 max-w-screen-lg h-auto bg-mocha/[.85] rounded-2xl p-4 xl:">
               <div className="text-4xl font-bold text-center">
                 {project.name}
               </div>
               <div className="text-2xl text-center">{project.description}</div>
             </div>
 
-            <div className="flex flex-col">
-              <Image src={project.image} alt="Project image" className="w-80 h-auto rounded-full pb-2" /> 
+            <div className="flex flex-col items-center">
+              <Image src={project.image} alt="Project image" sizes="100vw" className="w-fixed w-[250px] min-w-[250px] h-auto rounded-full pb-2" width={0} height={0} /> 
               
               <div className="flex items-center justify-center space-x-2">
-                <Image src="/github.png" alt="Github icon" className="w-10 h-auto"/>
+                <Image src="/github.png" alt="Github icon" sizes="100vw" className="h-auto w-[35px]" width={0} height={0}/>
                 <a href={project.repo} target="_blank" className="text-center text-black underline underline-offset-auto whitespace-nowrap">
                   <TypeWords input = {"View on Github"} />
                 </a>

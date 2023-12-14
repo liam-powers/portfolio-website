@@ -8,16 +8,16 @@ import clsx from 'clsx';
 
 const links = [
   { name: 'Home', href: '/', icon: HomeIcon },
-  { name: 'Skills', href: '#skills', icon: Cog6ToothIcon },
-  { name: 'Projects', href: '#projects', icon: FolderOpenIcon },
-  { name: 'Contact', href: '#contact', icon: UserPlusIcon },
+  { name: 'Skills', href: '/#skills', icon: Cog6ToothIcon },
+  { name: 'Projects', href: '/#projects', icon: FolderOpenIcon },
+  { name: 'Contact', href: '/#contact', icon: UserPlusIcon },
   { name: 'Film', href: '/film', icon: FilmIcon },
 ];
 
 export default function NavLinks() {
   const pathname = usePathname();
   return (
-    <div className="flex justify-center items-center bg-mocha/[.85] text-4xl text-white font-bold py-1 gap-40 m-auto scroll-smooth">
+    <div className="flex justify-center items-center bg-mocha/[.85] text-sm md:text-2xl text-white font-bold py-1 gap-[1rem] md:gap-[4rem] m-auto scroll-smooth">
       {links.map((link) => (
         <div key={link.name}>
           <a href={link.href} className="hover:fill-[#569A86] hover:text-[#569A86]">
