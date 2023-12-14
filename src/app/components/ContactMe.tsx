@@ -1,12 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const contactText = "Let's get in touch! Reach me at:";
+
 export default function ContactMe() {
     return (
         <div className="text-center flex items-center flex-col">
             <div className="pb-6">
                 <div className="bg-mocha/[.85] p-4 rounded-2xl text-3xl font-bold inline-block">
-                    Let's get in touch! Reach me at:
+                    { contactText }
                 </div>
             </div>
             <div className="mt-4 text-black text-sm md:text-2xl">
