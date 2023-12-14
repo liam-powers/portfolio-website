@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const contactText = "Let's get in touch! Reach me at:";
+const contactText = "Want to get in touch! Reach me at:";
 
 export default function ContactMe() {
     return (
