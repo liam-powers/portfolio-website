@@ -1,10 +1,7 @@
 'use client';
 
 import { HomeIcon, FilmIcon, Cog6ToothIcon, UserPlusIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
-import { FaDumbbell } from "react-icons/fa6";
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
+import { useState, useEffect } from 'react';
 
 const links = [
   { name: 'Home', href: '/', icon: HomeIcon },
@@ -15,17 +12,29 @@ const links = [
 ];
 
 export default function NavLinks() {
-  const pathname = usePathname();
+  const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    const nav = document.querySelector('.navbar') as HTMLElement;
+    if (nav) {
+      setNavHeight(nav.offsetHeight);
+    }
+  }, []);
+
   return (
-    <div className="flex justify-center items-center bg-mocha/[.85] text-sm md:text-2xl text-white font-bold py-1 gap-[1rem] md:gap-[4rem] m-auto scroll-smooth">
-      {links.map((link) => (
-        <div key={link.name}>
-          <a href={link.href} className="hover:fill-[#569A86] hover:text-[#569A86]">
-            <link.icon className="w-10 h-auto m-auto" href={link.href}/>
-            <p>{link.name}</p>
-          </a>
-        </div>
-      ))}
-    </div>
+    <>
+      <div style={{ height: navHeight }} aria-hidden="true" />
+
+      <div className="navbar fixed top-0 left-0 w-full flex justify-center items-center bg-mocha/[.85] text-sm md:text-2xl text-white font-bold py-1 gap-[1rem] md:gap-[4rem] z-50">
+        {links.map((link) => (
+          <div key={link.name}>
+            <a href={link.href} className="hover:fill-[#569A86] hover:text-[#569A86]">
+              <link.icon className="w-10 h-auto m-auto" href={link.href}/>
+              <p>{link.name}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

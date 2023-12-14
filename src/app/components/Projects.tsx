@@ -22,7 +22,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-[3rem]">
+    <div className="flex flex-col">
       {projects.map((project) => (
         <div key={project.name}>
           <div className="flex flex-col md:flex-row gap-5 md:gap-20 px-5 pb-20 md:pb-0min-w-full">
