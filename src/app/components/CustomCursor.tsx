@@ -2,7 +2,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 export default function CustomCursor() {
     return (
-        <div>
+        <div className="invisible md:visible">
             <AnimatedCursor
                 innerSize={14}
                 outerSize={13}
