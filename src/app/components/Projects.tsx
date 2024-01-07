@@ -1,12 +1,12 @@
-import TypeWords from './TypeWords';
 import Image from 'next/image';
 
 const projects = [
   {
-    name: "Talkbass Classifieds Reloaded",
-    description: "Upgrading TalkBass.com's online bass gear listings via modern UI design and advanced filter functionality. \
-    Built with React, Puppeteer, and Firebase. Direct links provided to sales! Currently in development.",
-    image: "/talkbass.png",
+    name: "Bass Harbor",
+    description: "Aggregates 10+ sites selling new or used upright bass & bass guitar related musical equipment into one stylish web app. \
+    Full-stack project created with MongoDB, Express.js, React.js, and Node.js (MERN) stack. \
+    Web scraped via Puppeteer API. Decreases buyer-seller match time upwards of 300%.",
+    image: "/uprightbass.png",
     repo: "https://github.com/liam-powers/Talkbass-Classifieds-Reloaded",
   },
 
@@ -26,7 +26,6 @@ export default function Projects() {
       {projects.map((project) => (
         <div key={project.name}>
           <div className="flex flex-col md:flex-row gap-5 md:gap-20 px-5 pb-20 md:pb-0min-w-full">
-
             <div className="flex flex-col gap-4 max-w-screen-lg h-auto bg-mocha/[.85] rounded-2xl p-4 xl:">
               <div className="text-4xl font-bold text-center">
                 {project.name}
@@ -39,8 +38,8 @@ export default function Projects() {
               
               <div className="flex items-center justify-center space-x-2">
                 <Image src="/github.png" alt="Github icon" sizes="100vw" className="h-auto w-[35px]" width={0} height={0}/>
-                <a href={project.repo} target="_blank" className="text-center text-black underline underline-offset-auto whitespace-nowrap">
-                  <TypeWords input = {"View on Github"} />
+                <a href={project.repo} target="_blank" className="text-center text-[#0051d4] underline underline-offset-auto whitespace-nowrap">
+                  <div>View on Github</div>
                 </a>
               </div>
 

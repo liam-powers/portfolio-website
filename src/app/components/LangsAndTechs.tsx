@@ -2,26 +2,26 @@ import Image from "next/image";
 
 const languages = [
   'Python',
-  'C Sharp',
-  'Java',
   'C',
   'TypeScript',
   'JavaScript',
-  'React',
+  'C Sharp',
+  'Java',
   'HTML',
   'CSS',
 ];
 
 const technologies = [
+  'MongoDB',
+  'Express.js',
+  'Node.js',
+  'React',
+  'Next.js',
   'Pandas',
   'NumPy',
   'Seaborn',
   'Matplotlib',
   'Git',
-  'GitHub',
-  'VSCode',
-  'Firebase',
-  'Next.js',
 ];
 
 function createTechDisplay(arr: string[]) {
@@ -40,13 +40,13 @@ function createTechDisplay(arr: string[]) {
 export default function LangsAndTechs() {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-20 md:gap-40 whitespace-nowrap items-center bg-mocha/[.85] px-[2rem] py-10 md:px-8 md:py-8 rounded-2xl">
+      <div className="flex flex-col md:flex-row gap-20 md:gap-40 whitespace-nowrap bg-mocha/[.85] px-[2rem] py-10 md:px-8 md:py-8 rounded-2xl">
         <div>
           <div className="text-4xl font-bold pb-3 underline underline-offset-auto"> Languages </div>
           <div>{ createTechDisplay(languages) }</div>
         </div>
         <div>
-          <div className="text-4xl font-bold pb-3 underline underline-offset-auto flex justify-center"> Technologies </div>
+          <div className="text-4xl font-bold pb-3 underline underline-offset-auto"> Technologies </div>
           <div>{ createTechDisplay(technologies) }</div>
         </div>
       </div>
