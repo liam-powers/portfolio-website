@@ -4,9 +4,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url("/blob-scene-haikei.svg");
+  background-color: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
 }
