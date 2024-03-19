@@ -1,29 +1,24 @@
 import type { Metadata } from 'next'
-import { Merriweather } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import GoogleAnalytics from './components/GoogleAnalytics'
-import NavLinks from './components/NavLinks'
-import Footer from './components/Footer'
 
-const jb = Merriweather({
-  subsets: ['latin'],
-  weight: '300'
-})
+const jb = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Bass Harbor',
-  description: 'Bass Harbor | Find your dream instrument',
+  title: 'Liam Powers Portfolio',
+  description: 'Liam Powers | Personal Portfolio | Software Engineer, Musician, Student at Northwestern University | Created with React/Next.js',
 }
 
-export default function RootLayout({ children, }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PRIVATE_GA_TRACKING_ID} />
-      <body className={jb.className}>
-        <NavLinks />
-        {children}
-      </body>
-      <Footer />
+      <body className={jb.className}>{children}</body>
     </html>
   )
 }
