@@ -2,26 +2,25 @@ import Image from "next/image";
 
 const languages = [
   'Python',
-  'C',
-  'TypeScript',
+  'Go',
   'JavaScript',
+  'TypeScript',
+  'C',
   'C Sharp',
+  'C++',
   'Java',
-  'HTML',
-  'CSS',
+  'SQL',
 ];
 
 const technologies = [
-  'MongoDB',
-  'Express.js',
-  'Node.js',
   'React',
+  'React Native',
   'Next.js',
-  'Pandas',
-  'NumPy',
-  'Seaborn',
-  'Matplotlib',
   'Git',
+  'Docker',
+  'Puppeteer',
+  'Pandas',
+  'Svelte',
 ];
 
 function createTechDisplay(arr: string[]) {

@@ -1,6 +1,6 @@
 'use client';
 
-import { HomeIcon, FilmIcon, Cog6ToothIcon, UserPlusIcon, FolderOpenIcon } from '@heroicons/react/24/solid';
+import { HomeIcon, FilmIcon, Cog6ToothIcon, UserPlusIcon, FolderOpenIcon, BookOpenIcon } from '@heroicons/react/24/solid';
 import { useState, useEffect } from 'react';
 
 const links = [
@@ -9,6 +9,7 @@ const links = [
   { name: 'Projects', href: '/#projects', icon: FolderOpenIcon },
   { name: 'Contact', href: '/#contact', icon: UserPlusIcon },
   { name: 'Film', href: '/film', icon: FilmIcon },
+  { name: 'Dev Blog', href: '/devBlog', icon: BookOpenIcon},
 ];
 
 export default function NavLinks() {
