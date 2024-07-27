@@ -26,7 +26,7 @@ export default function NavLinks() {
     <>
       <div style={{ height: navHeight }} aria-hidden="true" />
 
-      <div className="navbar fixed top-0 left-0 w-full flex justify-center items-center bg-mocha/[.85] text-sm md:text-2xl text-white font-bold py-1 gap-[1rem] md:gap-[4rem] z-50">
+      <div className="navbar fixed top-0 left-0 w-full flex justify-center items-center bg-mocha text-sm md:text-2xl text-white font-bold py-1 gap-[1rem] md:gap-[4rem] z-50">
         {links.map((link) => (
           <div key={link.name}>
             <a href={link.href} className="hover:fill-[#569A86] hover:text-[#569A86]">
